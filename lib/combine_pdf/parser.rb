@@ -533,9 +533,9 @@ module CombinePDF
           end
         else
           unless catalogs[:Type] == :Page
-            if (catalogs[:AS] || catalogs[:OCProperties]) && !@allow_optional_content
-              raise ParsingError, "Optional Content PDF files aren't supported and their pages cannot be safely extracted."
-            end
+            #if (catalogs[:AS] || catalogs[:OCProperties]) && !@allow_optional_content
+              #raise ParsingError, "Optional Content PDF files aren't supported and their pages cannot be safely extracted."
+            #end
 
             inheritance_hash[:MediaBox] = catalogs[:MediaBox] if catalogs[:MediaBox]
             inheritance_hash[:CropBox] = catalogs[:CropBox] if catalogs[:CropBox]
